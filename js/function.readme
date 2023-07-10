@@ -1,0 +1,27 @@
+//ConvertingColorsToProperFormat
+En la función normalizeColor, he asignado cada componente de color 
+(rojo, verde y azul) a una variable separada para mejorar la legibilidad. 
+Luego, he devuelto los valores normalizados en un arreglo.
+
+En la función reduce, he cambiado el nombre del parámetro hexCode 
+a hexCodes para reflejar mejor que es un objeto que almacenará los 
+códigos hexadecimales. Además, he cambiado los nombres de los
+ parámetros t y n a value e index, respectivamente, para mayor claridad.
+
+/*EssentialFuntionalityOfWebgl*/
+En la versión simplificada, 
+he eliminado la función
+ getShaderByType y en su lugar he creado una función 
+ compileShader para compilar tanto el shader de vértices 
+ como el shader de fragmentos. También he reemplazado la
+  función getUniformVariableDeclarations por getUniformDeclarations, 
+  que ahora genera las declaraciones de uniformes en función del tipo
+   pasado (vertex o fragment).
+
+Además, he movido la variable context dentro del 
+constructor de Material para que sea más claro de dónde proviene.
+
+Ten en cuenta que he simplificado el código de la clase 
+Material en base a lo que proporcionaste, pero puede haber 
+dependencias y lógica adicional en otros lugares del código
+ que podrían requerir ajustes adicionales.
