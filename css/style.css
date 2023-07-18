@@ -119,11 +119,11 @@ a {
   transition: color 0.25s ease;
 }
 a:hover {
-  color: var(-Primary-accent);
+  color: var(--Primary-accent);
 }
 p {
-  font-size: var(-P-size);
-  line-height: var(-P-height);
+  font-size: var(--P-size);
+  line-height: var(--P-height);
   font-weight: 400;
   margin: var(--spacing-md) 0;
 }
@@ -187,7 +187,7 @@ p {
 .subtitle2 {
   color: var(--blue-1);
 }
-.secondary-text {
+.secondaryText {
   font-size: var(--secondary-text-size);
   line-height: var(--secondary-text-height);
   color: var(--text-grey);
@@ -201,7 +201,7 @@ p {
   font-weight: bold;
   border-radius: var(--standard-border-radius);
   border: none;
-  background-color: var(-Primary-accent);
+  background-color: var(--Primary-accent);
   color: var(--text-light);
   padding: var(--spacing-sm) var(--spacing-md);
   transition: all 0.15s ease;
@@ -218,7 +218,7 @@ p {
   border-radius: var(--standard-border-radius);
   border: none;
   background-color: transparent;
-  color: var(-Primary-accent);
+  color: var(--Primary-accent);
   transition: all 0.15s ease;
 }
 .secondaryButton:hover {
@@ -274,7 +274,7 @@ p {
 .hamburgerButton {
   display: none;
 }
-/* animatedGradientHeroBackground  */
+/*animatedGradientHeroBackground */
 #gradientCanvas {
   width: 200%;
   height: 970px;
@@ -338,7 +338,7 @@ p {
   height: 60px;
   place-self: center;
 }
-/*unifiedlatformSectio*/
+
 .unifiedPlatformSection {
   padding: var(--spacing-xl) 0;
   width: 100%;
@@ -360,7 +360,7 @@ p {
   background-color: var(-Primary-accent);
 }
 
-/*graphicGridSection*/
+
 .graphicSection {
   width: 100%;
   display: flex;
@@ -507,7 +507,7 @@ p {
   content: "";
   width: 100%;
   height: 1200px;
-  background-color: var(-Primary-accent);
+  background-color: var(--Primary-accent);
   position: absolute;
   top: -32px;
   left: 0;
@@ -568,7 +568,7 @@ p {
   margin: var(--spacing-md) 0 0 0;
 }
 .virtualEventSection .primaryButton:hover {
-  background-color: var(-Primary-accent);
+  background-color: var(--Primary-accent);
 }
 
 .virtualEventSection .colLeft {
@@ -594,7 +594,7 @@ p {
 }
 
 .swipeSessionsCard .cardTop::before {
-  background: var(-Primary-gradient);
+  background: var(--Primary-gradient);
   content: "";
   width: 100%;
   height: 150%;
@@ -674,11 +674,11 @@ p {
 }
 
 .gettingStartedsection .colRight .card .secondaryButton {
-  color: var(-Purple-2);
+  color: var(--Purple-2);
   padding-left: 0;
 }
 
-/*footerStyles*/
+/*footer*/
 
 .footer {
   display: flex;
@@ -715,7 +715,7 @@ p {
 }
 
 .footer .col a:hover {
-  color: var(-Purple-1);
+  color: var(--Purple-1);
   text-decoration: underline;
 }
 .footer .iconLink {
@@ -773,7 +773,7 @@ p {
     width: 100%;
     height: auto;
   }
-  .integrationsSection .col-left {
+  .integrationsSection .colLeft {
     width: 60%;
   }
   .integrationsSection .colRight {
@@ -890,7 +890,7 @@ p {
     flex-direction: column;
   }
 
-  .twoColumn .col-left {
+  .twoColumn .colLeft {
     width: 100%;
   }
 
@@ -911,13 +911,13 @@ p {
   .hero .twoColumn .heroPhoneContainer {
     display: none;
   }
-  .sponsor-section {
+  .sponsorSection {
     margin: var(--spacing-xl) 0 var(--spacing-sm) 0;
   }
-  .sponsor-grid {
+  .sponsorGrid {
     grid-template-columns: 1fr 1fr;
   }
-  .unifiedPlatform-section {
+  .unifiedPlatformSection {
     padding: var(--spacing-md) 0;
   }
   .integrationsSection {
