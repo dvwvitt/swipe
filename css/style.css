@@ -23,6 +23,7 @@
   --button-size: 16px;
   /* Spacing*/
   --spacing-md: 16px;
+  --spacing-sm: 8px;
   --spacing-lg: 32px;
   --spacing-xl: 64px;
   --standard-width: 1144px;
@@ -178,7 +179,7 @@ p {
 }
 .subtitle,
 .subtitle2 {
-  color: var(-Purple-1);
+  color: var(--Purple-1);
   font-family: var(--heading-font);
   font-weight: 500;
   font-size: var(--subtitle-size);
@@ -201,15 +202,16 @@ p {
   font-weight: bold;
   border-radius: var(--standard-border-radius);
   border: none;
-  background-color: var(--Primary-accent);
+  background-color: #0a2540;
   color: var(--text-light);
   padding: var(--spacing-sm) var(--spacing-md);
   transition: all 0.15s ease;
 }
 .primaryButton:hover {
-  background-color: var(--primary-button-hover);
+  background-color: #0a2540 var(--primary-button-hover);
   cursor: pointer;
 }
+
 .secondaryButton {
   font-family: var(--body-font);
   font-size: var(--button-size);
@@ -276,17 +278,14 @@ p {
 }
 /*animatedGradientHeroBackground */
 #gradientCanvas {
-  width: 200%;
-  height: 970px;
-  transform: rotate(-10deg);
   position: absolute;
   top: -600px;
-  left: -50%;
+  left: -50;
+  width: 200%;
+  height: 970px;
   z-index: -1;
-  --gradient-color-1: #ef008f;
-  --gradient-color-2: #6ec3f4;
-  --gradient-color-3: #7038ff;
-  --gradient-color-4: #ffba27;
+  transform-origin: bottom center;
+  transform: skewY(-10deg);
 }
 /* heroStyles */
 .hero {
@@ -306,7 +305,7 @@ p {
 
 .buttonContainerButton:nth-of-type(2) {
   margin: 0 0 0 var(--spacing-md);
-  color: var(-Purple-2);
+  color: var(--Purple-2);
 }
 
 .hero .heroPhoneContainer {
@@ -357,9 +356,9 @@ p {
   margin: var(--spacing-md) 0;
 }
 .unifiedPlatformSection .primaryButton:hover {
-  background-color: var(-Primary-accent);
+  background-color: var(--Primary-accent);
 }
-
+/*graphicSection*/
 
 .graphicSection {
   width: 100%;
@@ -367,6 +366,7 @@ p {
   justify-content: center;
   background-color: var(--bg-light);
 }
+
 .graphicGrid {
   display: grid;
   grid-template-areas:
@@ -375,6 +375,11 @@ p {
     "phone dash dash";
   grid-gap: var(--spacing-lg);
   padding: var(--spacing-lg) 0;
+}
+
+.sectionContainer {
+  width: 100%;
+  max-width: var(--standard-width);
 }
 
 #creditCard {
@@ -401,7 +406,7 @@ p {
   border-radius: var(--standard-border-radius);
 }
 
-/*integrationsSectionsStyles*/
+/* Estilos para la sección de integraciones */
 .integrationsSection {
   color: var(--text-light);
   width: 100%;
@@ -416,7 +421,7 @@ p {
   content: "";
   width: 100%;
   height: 1100px;
-  background-color: var(-Primary-accent);
+  background-color: var(--primary-accent);
   position: absolute;
   top: -32px;
   left: 0;
@@ -435,9 +440,10 @@ p {
   z-index: -2;
 }
 
+/* Estilos para los botones */
 .integrationsSection .primaryButton {
   background-color: var(--blue-1);
-  color: var(-Primary-accent);
+  color: var(--Primary-accent);
   margin: var(--spacing-md) 0 0 0;
 }
 
@@ -449,25 +455,25 @@ p {
   color: var(--blue-1);
 }
 
+/* Estilos para el contenedor de tarjetas */
 .integrationsSection .cardContainer {
   display: flex;
+  flex-wrap: wrap;
   margin: var(--spacing-lg) 0;
 }
 
-.integrationsSection .cardContainer .card {
-  width: 50%;
+.integrationsSection .card {
+  flex: 1 1 50%; /* Para que cada tarjeta ocupe el 50% del contenedor */
 }
 
-#apiCode {
+/* Estilos para las imágenes */
+#apiCode,
+#terminalCode {
   max-width: 470px;
   margin: 0 0 var(--spacing-md) 0;
   border-radius: var(--standard-border-radius);
 }
 
-#terminalCode {
-  max-width: 470px;
-  border-radius: var(--standard-border-radius);
-}
 
 /*whySwipeSection*/
 
@@ -507,7 +513,7 @@ p {
   content: "";
   width: 100%;
   height: 1200px;
-  background-color: var(--Primary-accent);
+  background-color: #0a2540;
   position: absolute;
   top: -32px;
   left: 0;
@@ -564,7 +570,7 @@ p {
 }
 
 .virtualEventSection .primaryButton {
-  background-color: var(-Purple-1);
+  background-color: var(--Purple-1);
   margin: var(--spacing-md) 0 0 0;
 }
 .virtualEventSection .primaryButton:hover {
@@ -576,72 +582,56 @@ p {
   padding: 0 var(--spacing-xl) 0 0;
 }
 
-.swipeSessionsCard {
-  width: 540px;
-  height: 446px;
-  box-shadow: var(--standard-box-shadow);
-  border-radius: var(--standard-border-radius);
-  overflow: hidden;
-}
-
-.swipeSessionsCard .cardTop {
-  width: 100%;
-  height: 50%;
+.colRight {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
+  align-items: center; /* Centrar elementos verticalmente */
 }
 
-.swipeSessionsCard .cardTop::before {
-  background: var(--Primary-gradient);
-  content: "";
-  width: 100%;
-  height: 150%;
-  position: absolute;
-  top: -40%;
-  transform: skewY(-5deg);
-  z-index: 1;
+.swipeSessionsCard {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end; /* Colocar avatares a la derecha */
+  background: linear-gradient(to bottom, #436bd8, #0d27b8); /* Fondo degradado */
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra */
+}
+
+.cardTop {
+  display: flex;
+  align-items: center;
 }
 
 #sessionsLogo {
-  z-index: 2;
-  width: 338px;
+  width: 60px;
+  height: 60px;
+  margin-right: 10px;
 }
 
-.virtualEventSection .avatars {
-  position: absolute;
-  bottom: -70px;
-  left: var(--spacing-xl);
-  z-index: 3;
-  /* width: 140px;
-  height: 80px; */
+.avatars img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%; /* Hacer los avatares redondos */
+  margin-left: -15px; /* Superponer los avatares un poco */
 }
 
-.virtualEventSection .avatars img {
-  width: 80px;
+.cardContent {
+  text-align: center;
 }
 
-.virtualEventSection .avatars img:nth-of-type(2) {
-  position: absolute;
-  left: 55px;
+.subtitle {
+  background: linear-gradient(to bottom, #007bff, #0056b3); /* Fondo degradado del título */
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent; /* Hacer que el texto sea transparente */
+  font-size: 18px;
+  font-weight: bold;
 }
 
-.virtualEventSection .cardBottom {
-  width: 100%;
-  height: 50%;
-  box-sizing: border-box;
-  padding: var(--spacing-xl);
-}
-.virtualEventSection .cardBottom .subtitle {
-  margin: var(--spacing-lg) 0 0 0;
+.secondaryText {
+  margin-top: 10px;
 }
 
-.virtualEventSection .cardBottom .secondaryText {
-  color: var(--text-dark);
-  font-weight: 700;
-  width: 50%;
-}
 
 /*gettingStartedSectio*/
 .gettingStartedsection {
@@ -655,7 +645,7 @@ p {
   margin: var(--spacing-md) 0;
 }
 .gettingStartedsection .primaryButton:hover {
-  background-color: var(-Primary-accent);
+  background-color: var(--Primary-accent);
 }
 
 .gettingStartedsection .colLeft {

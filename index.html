@@ -14,7 +14,7 @@
     <title>Swipe</title>
   </head>
   <body>
-    <nav>
+    <nav class="navbar">
       <img src="images/logo-white.svg" alt="Swipe." />
       <ul class="menu">
         <li><a href="#">Products</a></li>
@@ -23,38 +23,35 @@
         <li><a href="#">Resources</a></li>
         <li><a href="#">Pricing</a></li>
       </ul>
-      <button class="primarybutton navbarButton">Sign In</button>
+      <button class="primaryButton navbarButton">Sign In</button>
     </nav>
     <main>
       <!--GradientBackground-->
-      <canvas
-        id="gradientCanvas"
-        width="865"
-        height="600"
-        class="isLoaded"
-      ></canvas>
+      <canvas id="gradientCanvas"></canvas>
       <!--HeroSection -->
-      <div class="sectionContainer twoColumn">
-        <div class="colLeft">
-          <h1>Paynebts infrastructure for the world</h1>
-          <p>
-            Tons of companies all over the world use Swipe's seamless platform
-            to manage their businesses's entire financial transaction
-            infrastructure online.
-          </p>
-          <div class="buttonContainer">
-            <button class="primaryButton whiteIcon">
-              start now
-              <img src="images/arrow-rigth-light.svg" alt="" />
-            </button>
-            <button class="seconndaryButton withIcon">
-              Contact sales
-              <img src="images/arrow-right-purple.svg" alt="" />
-            </button>
+      <div class="hero">
+        <div class="sectionContainer twoColumn">
+          <div class="colLeft">
+            <h1>Paynebts infrastructure for the world</h1>
+            <p>
+              Tons of companies all over the world use Swipe's seamless platform
+              to manage their businesses's entire financial transaction
+              infrastructure online.
+            </p>
+            <div class="buttonContainer">
+              <button class="primaryButton withIcon"> <!-- Aquí está la corrección -->
+                start now
+                <img src="images/arrow-right-light.svg" alt="" />
+              </button>
+              <button class="secondaryButton withIcon"> <!-- Aquí está la corrección -->
+                Contact sales
+                <img src="images/arrow-right-purple.svg" alt="" />
+              </button>
+            </div>
           </div>
-        </div>
-        <div class="colRight heroPhoneContainer">
-          <img class="heroPhone" src="images/hero-phone.png" alt="" />
+          <div class="colRight heroPhoneContainer">
+            <img class="heroPhone" src="images/hero-phone.png" alt="" />
+          </div>
         </div>
       </div>
       <!--sponsorSection -->
@@ -101,7 +98,7 @@
             </p>
           </div>
         </div>
-        <button class="primaryButtonWithIcon">
+        <button class="primaryButton withIcon">
           Start now
           <img src="images/arrow-right-light.svg" alt="" />
         </button>
@@ -109,9 +106,12 @@
     </div>
     <!--GraphicGridSection-->
     <div class="graphicSection">
-      <div class="selectionContainer">
+      <div class="sectionContainer">
         <div class="graphicGrid">
-          <img src="images/creditCard.png" alt="" />
+          <img src="images/credit-card.png" alt="" id="creditCard">
+          <img src="images/slack-invoice.png" alt="" id="slackInvoice">
+          <img src="images/phone.png" alt="" id="phone">
+          <img src="images/dash.png" alt="" id="dash">
         </div>
       </div>
     </div>
@@ -126,12 +126,12 @@
             building good technology, instead of spending time and money
             reinventing the wheel.
           </p>
-
-          <button class="primarybutton withIcon">
+    
+          <button class="primaryButton withIcon">
             Start now
             <img src="images/arrow-right-dark.svg" alt="" />
           </button>
-
+    
           <div class="cardContainer">
             <div class="card">
               <img src="images/tools-icon.png" alt="" class="icon" />
@@ -140,7 +140,7 @@
                 We offer front end and back end libraries in some of the most
                 widely used technologies, old and new.
               </p>
-              <button class="seconndaryButton withIcon">
+              <button class="secondaryButton withIcon">
                 See libraries
                 <img src="images/arrow-right-blue.svg" alt="" />
               </button>
@@ -148,11 +148,11 @@
             <div class="card">
               <img src="images/cube-icon.png" alt="" class="icon" />
               <h3>Custom Integrations</h3>
-              <p class="secondary-text">
+              <p class="secondaryText">
                 Use integrations for systems like Shopify, WooCommerce,
                 NetSuite, and more.
               </p>
-              <button class="seconndaryButton withIcon">
+              <button class="secondaryButton withIcon">
                 Explore partners
                 <img src="images/arrow-right-blue.svg" alt="" />
               </button>
@@ -160,221 +160,192 @@
           </div>
         </div>
         <div class="colRight">
-          <img src="images/apiCode.png" alt="" id="apiCode" />
-          <img src="images/terminalCode.png" alt="" id="terminalCode" />
+          <img src="images/api-code.png" alt="" id="apiCode" />
+          <img src="images/terminal-code.png" alt="" id="terminalCode" />
         </div>
       </div>
     </div>
-    <!--whySwipeSection -->
+    <!--why swipe-->
     <div class="whySwipeSection">
       <div class="sectionContainer">
-        <p class="subtitle">Why Swipe</p>
-        <h2>A tech-first approach to finance</h2>
-        <div class="cardContainer">
-          <div class="card">
-            <img src="images/cloud-icon.png" alt="" class="icon" />
-            <h3>Efficient Always</h3>
-            <p class="secondary-text">
-              We've optimized every level of the finance stack, from
-              integrations to prebuilt checkout flows - no detail has been
-              spared.
-            </p>
-          </div>
-          <div class="card">
-            <img src="images/cycle-icon.png" alt="" class="icon" />
-            <h3>Fast-Improving</h3>
-            <p class="secondaryText">
-              We make constant updates and improvements to help you stay on the
-              cutting edge of your industry, deploying to production around 20X
-              per day!
-            </p>
-          </div>
-          <div class="card">
-            <img src="images/shield-icon.png" alt="" class="icon" />
-            <h3>Tried and true</h3>
-            <p class="secondaryText">
-              Our systems operate with 100% uptime, with scalability and uptime
-              as a guarantee. Swipe is super duper certified so don't worry
-            </p>
-          </div>
-          <div class="card">
-            <img src="images/bars-icon.png" alt="" class="icon" />
-            <h3>Crazy Optimized</h3>
-            <p class="secondaryText">
-              We use machine learning trained on billions of data points to help
-              optimize all products, from fraud to revenue recovery and more.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="globalSection">
-      <div class="sectionContainer">
-        <div class="twoColumn">
-          <div class="colLeft">
-            <p class="subtitle2">Global scale</p>
-            <h2>A structure for global businesses</h2>
-            <p>
-              Swipe makes moving money simple, borderless, and programmable -
-              just like the rest of the internet. We have teams all over the
-              world and we process billions and billions of dollars yearly for
-              <a href="#">startups, Fortune 500s, and everything in between.</a>
-            </p>
-          </div>
-          <div class="colRight">
-            <img id="globe" src="images/global-graphic.png" alt="" />
-          </div>
-        </div>
-        <div class="cardContainer">
-          <div class="card">
-            <h3>250M+</h3>
-            <p class="secondaryText">
-              API requests each day, peaking at 15,000 requests a second.
-            </p>
-          </div>
-          <div class="card">
-            <h3>97%</h3>
-            <p class="secondaryText">
-              of US adults have bought from businesses that use Swipe
-            </p>
-          </div>
-          <div class="card">
-            <h3>135+</h3>
-            <p class="secondaryText">
-              currencies and payment methods supported
-            </p>
-          </div>
-          <div class="card">
-            <h3>35+</h3>
-            <p class="secondaryText">
-              countries with local, acquiring, optimizing acceptance rates
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!--VirtualEventsSection-->
-    <div class="virtualEventsSection">
-      <div class="sectionContainer twoColumn">
-        <div class="colLeft">
-          <p class="subtitle">Virtual events</p>
-          <h2>Check out Sessions now!</h2>
-          <p>
-            Swipe Sessions is our annual conference - it's now available to
-            watch on demand! Check it out and become an "internet economy"
-            genius, and see how Swipe can transform the way you do business
-            online.
-          </p>
-          <button class="primarybutton withIcon">
-            Start now
-            <img src="images/arrow-right-light.svg" />
-          </button>
-        </div>
-        <div class="colRight">
-          <div class="swipeSessionsCard">
-            <div class="cardTop">
-              <img id="sessionsLogo" src="images/swipe-sessions.png" alt="" />
-              <div class="avatars">
-                <img src="images/avatar1.png" alt="" />
-                <img src="images/avatar2.png" alt="" />
+          <p class="subtitle">Why Swipe</p>
+          <h2>A tech-first approach to finance</h2>
+          <div class="cardContainer">
+              <div class="card">
+                  <img src="images/cloud-icon.png" alt="" class="icon">
+                  <h3>Efficient Always</h3>
+                  <p class="secondaryText">
+                      We've optimized every level of the finance stack, from integrations to prebuilt checkout
+                      flows - no detail has been spared.
+                  </p>
               </div>
-            </div>
-            <div class="cardBottom">
-              <div class="cardContent">
-                <p class="subtitle">Keynote</p>
-                <p class="secondaryText">
-                  Everything you need to know about the internet economy
-                </p>
+              <div class="card">
+                  <img src="images/cycle-icon.png" alt="" class="icon">
+                  <h3>Fast-Improving</h3>
+                  <p class="secondaryText">
+                      We make constant updates and improvements to help you stay on the cutting edge of your
+                      industry, deploying to production around 20X per day!
+                  </p>
               </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="gettingStartedSection">
-      <div class="sectionContainer twoColumn">
-          <div class="colLeft">
-              <h2>What are you waiting for?</h2>
-              <p>Explore <a href="#">Swipe</a> now, or create an account and start accepting payments today! If
-                  you need a custom package for your business, let's chat today.</p>
-              <button class="primaryButton withIcon">
-                  Start now
-                  <img src="images/arrow-right-light.svg" alt="">
-              </button>
-          </div>
-          <div class="colRight">
               <div class="card">
                   <img src="images/shield-icon.png" alt="" class="icon">
-                  <h3>Always know what you pay</h3>
-                  <p class="secondaryText">Integrated per-transaction pricing with no hidden fees.</p>
-
-                  <button class="secondaryButton withIcon">
-                      Pricing details
-                      <img src="images/arrow-right-purple.svg" alt="Swipe">
-                  </button>
+                  <h3>Tried and true</h3>
+                  <p class="secondaryText">
+                      Our systems operate with 100% uptime, with scalability and uptime as a guarantee. Swipe is
+                      super duper certified so don't worry
+                  </p>
               </div>
               <div class="card">
                   <img src="images/bars-icon.png" alt="" class="icon">
-                  <h3>Start your integration</h3>
-                  <p class="secondaryText">Get up and running with Stripe in as little as 10 minutes.</p>
-
-                  <button class="secondaryButton withIcon">
-                      API reference
-                      <img src="images/arrow-right-purple.svg" alt="Swipe">
-                  </button>
+                  <h3>Crazy Optimized</h3>
+                  <p class="secondaryText">
+                      We use machine learning trained on billions of data points to help optimize all products,
+                      from fraud to revenue recovery and more.
+                  </p>
               </div>
           </div>
-
       </div>
-  </div>
-  <footer class="footer">
-    <div class="sectionContainer">
-        <div class="col">
-            <img src="images/logo-dark.svg" alt="" id="footerLogo">
-            <div class="iconLink">
-                <img src="images/location-icon.png" alt="">
-                <a href="#">United States</a>
+    </div>
+      <!--Golbal Scale-->
+      <div class="globalSection">
+        <div class="sectionContainer">
+            <div class="twoColumn">
+                <div class="colLeft">
+                    <p class="subtitle2">Global scale</p>
+                    <h2>A structure for global businesses</h2>
+                    <p>Swipe makes moving money simple, borderless, and programmable - just like the rest of the
+                        internet. We have teams all over the world and we process billions and billions of dollars
+                        yearly for <a href="#">startups, Fortune 500s, and everything in between.</a></p>
+                </div>
+                <div class="colRight">
+                    <img id="globe" src="images/global-graphic.png" alt="">
+                </div>
             </div>
-            <div class="iconLink">
-                <img src="images/comment-icon.png" alt="">
-                <a href="#">English (United States)</a>
+            <div class="cardContainer">
+                <div class="card">
+                    <h3>250M+</h3>
+                    <p class="secondaryText">API requests each day, peaking at 15,000 requests a second.</p>
+                </div>
+                <div class="card">
+                    <h3>97%</h3>
+                    <p class="secondaryText">of US adults have bought from businesses that use Swipe</p>
+                </div>
+                <div class="card">
+                    <h3>135+</h3>
+                    <p class="secondaryText">currencies and payment methods supported</p>
+                </div>
+                <div class="card">
+                    <h3>35+</h3>
+                    <p class="secondaryText">countries with local, acquiring, optimizing acceptance rates</p>
+                </div>
             </div>
-        </div>
-        <div class="col">
-            <h3>Products</h3>
-            <ul>
-                <li><a href="#">Atlas</a></li>
-                <li><a href="#">Billing</a></li>
-                <li><a href="#">Invoicing</a></li>
-                <li><a href="#">Payments</a></li>
-                <li><a href="#">Checkout</a></li>
-                <li><a href="#">Identity</a></li>
-            </ul>
-        </div>
-        <div class="col">
-            <h3>Use Cases</h3>
-            <ul>
-                <li><a href="#">eCommerce</a></li>
-                <li><a href="#">SaaS</a></li>
-                <li><a href="#">Marketplace</a></li>
-                <li><a href="#">Embedded Finance</a></li>
-                <li><a href="#">Crypto</a></li>
-                <li><a href="#">Creator Economy</a></li>
-            </ul>
-        </div>
-        <div class="col">
-            <h3>Resources</h3>
-            <ul>
-                <li><a href="#">Support Center</a></li>
-                <li><a href="#">Guides</a></li>
-                <li><a href="#">Blog</a></li>
-                <li><a href="#">Licenses</a></li>
-                <li><a href="#">Privacy &amp; Terms</a></li>
-                <li><a href="#">Cookie Settings</a></li>
-            </ul>
         </div>
     </div>
+    <div class="virtualEventsSection">
+      <div class="sectionContainer twoColumn">
+          <div class="colLeft">
+              <p class="subtitle">Virtual events</p>
+              <h2>Check out Sessions now!</h2>
+              <p>Swipe Sessions is our annual conference - it's now available to watch on demand! Check it out and
+                  become an "internet economy" genius, and see how Swipe can transform the way you do business
+                  online.</p>
+              <button class="primaryButton withIcon">
+                  Start now
+                  <img src="images/arrow-right-light.svg">
+              </button>
+          </div>
+          <div class="colRight">
+            <div class="swipeSessionsCard">
+                <div class="cardTop">
+                    <img id="sessionsLogo" src="images/swipe-sessions.png" alt="">
+                    <div class="avatars">
+                        <img src="images/avatar1.png" alt="">
+                        <img src="images/avatar2.png" alt="">
+                    </div>
+                </div>
+                <div class="cardBottom">
+                    <div class="cardContent">
+                        <p class="subtitle">Keynote</p>
+                        <p class="secondaryText">Everything you need to know about the internet economy</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </div>
+  </div>
+          <div class="getting-started-section">
+            <div class="section-container two-column">
+                <div class="col-left">
+                    <h2>What are you waiting for?</h2>
+                    <p>Explore <a href="#">Swipe</a> now, or create an account and start accepting payments today! If
+                        you need a custom package for your business, let's chat today.</p>
+                    <button class="primary-button with-icon">
+                        Start now
+                        <img src="assets/arrow-right-light.svg" alt="">
+                    </button>
+                </div>
+                <div class="col-right">
+                    <div class="card">
+                        <img src="assets/shield-icon.png" alt="" class="icon">
+                        <h3>Always know what you pay</h3>
+                        <p class="secondary-text">Integrated per-transaction pricing with no hidden fees.</p>
 
-</footer>
+                        <button class="secondary-button with-icon">
+                            Pricing details
+                            <img src="assets/arrow-right-purple.svg" alt="">
+                        </button>
+                    </div>
+                    <div class="card">
+                        <img src="assets/bars-icon.png" alt="" class="icon">
+                        <h3>Start your integration</h3>
+                        <p class="secondary-text">Get up and running with Stripe in as little as 10 minutes.</p>
+
+                        <button class="secondary-button with-icon">
+                            API reference
+                            <img src="assets/arrow-right-purple.svg" alt="">
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+          </div>
+          <div class="gettingStartedSection">
+            <div class="sectionContainer twoColumn">
+                <div class="colLeft">
+                    <h2>What are you waiting for?</h2>
+                    <p>Explore <a href="#">Swipe</a> now, or create an account and start accepting payments today! If
+                        you need a custom package for your business, let's chat today.</p>
+                    <button class="primaryButton withIcon">
+                        Start now
+                        <img src="images/arrow-right-light.svg" alt="">
+                    </button>
+                </div>
+                <div class="colRight">
+                    <div class="card">
+                        <img src="images/shield-icon.png" alt="" class="icon">
+                        <h3>Always know what you pay</h3>
+                        <p class="secondaryText">Integrated per-transaction pricing with no hidden fees.</p>
+
+                        <button class="secondaryButton withIcon">
+                            Pricing details
+                            <img src="images/arrow-right-purple.svg" alt="">
+                        </button>
+                    </div>
+                    <div class="card">
+                        <img src="images/bars-icon.png" alt="" class="icon">
+                        <h3>Start your integration</h3>
+                        <p class="secondaryText">Get up and running with Stripe in as little as 10 minutes.</p>
+
+                        <button class="secondaryButton withIcon">
+                            API reference
+                            <img src="images/arrow-right-purple.svg" alt="">
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+          </div>
+
+    <script src="js/index.js"></script>
   </body>
 </html>
